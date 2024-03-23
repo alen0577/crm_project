@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 CRM-Home
@@ -6,6 +7,158 @@ CRM-Home
 
 {% block content %}
 
-<h1 class="text-center">Wecome</h1>
+<section id="nav-section">
+    <div class="container">
+        <div class="box mb-5">
+            {% include 'navbar.html' %}
+        </div>
+    </div>
+    
+</section>
+
+<section id="section2">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 mt-5">
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class=" btn-search" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 mt-5">
+                <div class="d-grid gap-2 d-md-block">
+                    <button class="btn-new" type="button">New <i class="fas fa-plus-circle"></i></button>
+                    <button class="btn-leads" type="button">Generate Leads <i class="fas fa-random"></i></button>
+                </div>
+            </div>
+            <div class="col-lg-4 mt-5">
+                
+            </div>
+            <div class="col-lg-4 mt-lg-5">
+                <div class="d-flex gap-3 justify-content-end">
+                    <a class="text-decoration-none main-color" href=""><i class="fas fa-filter"></i> Filter</a>
+                    <a class="text-decoration-none main-color" href=""><i class="fas fa-layer-group"></i> Group by</a>
+                    <a class="text-decoration-none main-color" href=""><i class="fas fa-star"></i> Favourites</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="section3">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-3">
+                <div class="row">
+                    <div class="col-lg-6">New</div>
+                    <div class="col-lg-6"><i class="fas fa-plus text-black-50"></i></div>
+                </div>
+                <div class="row mt-lg-1">
+                    <div class="col-lg-6">
+                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar custom-progress" style="width: 25%"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6"><p class="text-black-50">80000</p></div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="row">
+                    <div class="col-lg-6">Qualified</div>
+                    <div class="col-lg-6"><i class="fas fa-plus text-black-50"></i></div>
+                </div>
+                <div class="row mt-lg-1">
+                    <div class="col-lg-6">
+                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar custom-progress" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6"><p class="text-black-50">80000</p></div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="row">
+                    <div class="col-lg-6">Proposition</div>
+                    <div class="col-lg-6"><i class="fas fa-plus text-black-50"></i></div>
+                </div>
+                <div class="row mt-lg-1">
+                    <div class="col-lg-6">
+                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar custom-progress" style="width: 75%"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6"><p class="text-black-50">80000</p></div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="row">
+                    <div class="col-lg-6">Won</div>
+                    <div class="col-lg-6"><i class="fas fa-plus text-black-50"></i></div>
+                </div>
+                <div class="row mt-lg-1">
+                    <div class="col-lg-6">
+                        <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar custom-progress" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6"><p class="text-black-50">80000</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+<style>
+    .form-control {
+        border-color: rgb(31, 0, 125); 
+    }
+    .form-control:focus {
+        box-shadow: none !important; /* Remove box shadow on focus */
+        border-color: rgb(31, 0, 125); 
+        
+    }
+    .btn-search{
+        background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+        color: white;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    .btn-search:hover{
+        color: white;
+    }
+    .btn-new{
+        background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        
+
+    }
+    .btn-leads{
+        background-image: linear-gradient(-20deg, #f5f5f5 0%, #eeeeee 100%);
+        color: rgb(0, 0, 100);
+        padding: 5px;
+        border-radius: 5px;
+        
+
+    }
+    .main-color{
+        color: rgb(0, 0, 100);
+    }
+
+    .custom-progress {
+        background-color: rgb(0, 0, 100);
+    }
+    
+</style>
 
 {% endblock  %} 
